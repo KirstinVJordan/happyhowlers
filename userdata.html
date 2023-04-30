@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Happy Howlers</title>
+<link href= "css/style.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="padding-top: 70px; background-color: #E9D8E4">
+	
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
+  <a class="navbar-brand" href="index.html">
+            <img src="images/Logo.svg" alt="" height="70">
+           
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+               
+                  <a class="nav-link" href="index.html">Home</a>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About </a>
+                </li>
+                
+				  <li class="nav-item active" >   
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"  id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="services.html"> Services <span class="sr-only">(current)</span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
+			  <a class="dropdown-item" href="boarding.html">Boarding</a>
+			  <a class="dropdown-item" href="grooming.html">Grooming</a>
+			  <a class="dropdown-item" href="training.html">Training</a>
+          </div>
+        </li>
+				  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+			    </li>
+                
+              </ul>
+    </div>
+          </div>
+	
+</nav>
+<body>
+   <div class="results">
+    <h1>Thanks for getting in touch:</h1>
+    <p>The information you sumbitted has been received. Please allow up to 48 hours for a reply, thank you. </p>
+    
+    <h3>Your submitted data:</h3>
+       
+    <div id="userdata"></div>
+       
+       <p><a href="index.html">Return to home page</a></p>
+    </div>
+    
+   <script>
+       
+        const dataList = document.getElementById("userdata")
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            dataList.append(`${name}: ${value}`)
+            dataList.append(document.createElement('br'))
+        }) 
+   
+    </script>
+    
+    
+    
+    </body>
+</html>
